@@ -24,4 +24,4 @@ I spent five years on real-time computer vision in C and C++. Gözcü, an accide
 
 ### Contact
 
-[enes@uzunenes.com](mailto:enes@uzunenes.com), [LinkedIn](https://www.linkedin.com/in/uzunenes), [GitHub](https://github.com/uzunenes).
+[me@uzunenes.com](mailto:me@uzunenes.com), [LinkedIn](https://www.linkedin.com/in/uzunenes), [GitHub](https://github.com/uzunenes).

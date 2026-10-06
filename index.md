@@ -6,4 +6,4 @@ I'm a senior software architect at Ford Otosan in Istanbul, working on AI infras
 
 - [CV](/cv/) ([PDF](/assets/enes-uzun-cv.pdf))
 - [About](/about/)
-- [GitHub](https://github.com/uzunenes) · [LinkedIn](https://www.linkedin.com/in/uzunenes) · [enes@uzunenes.com](mailto:enes@uzunenes.com)
+- [GitHub](https://github.com/uzunenes) · [LinkedIn](https://www.linkedin.com/in/uzunenes) · [me@uzunenes.com](mailto:me@uzunenes.com)
