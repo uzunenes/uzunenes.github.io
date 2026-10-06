@@ -15,16 +15,16 @@ Senior software architect at Ford Otosan (Ford Motor Company joint venture), wor
 ## Experience
 
 ### Senior Software Architect
-*Ford Otosan (Ford Motor Company joint venture), Türkiye* · Dec 2022 – Present
+*Ford Otosan (Ford Motor Company joint venture), Istanbul. Senior Software Engineer from Dec 2022 to Aug 2026.* · Aug 2026 – Present
 
 - Designed and built the company's LLM gateway. It decides per request whether the data may leave the company: confidential code and documents go to open models on our own GPUs, the rest to Azure OpenAI. Access goes through Entra ID (OAuth2/OIDC).
 - Deployed vLLM on on-prem GPUs behind OpenAI-compatible endpoints, so 250 developers use Copilot CLI with internal models (600+ agent requests a day) without code leaving the network or per-token API costs.
 - Run the multi-site Kubernetes GPU cluster (5 servers; 2× H200, 4× A100, 4× L40S, 4× V100) with Prometheus and Grafana monitoring. It hosts the internal chatbot (15,000 users), the coding models and the production vision models.
 - Turned MobileAI, our vision system in four plants, into a no-code platform where line engineers collect data, label and train models themselves. New models go live only after engineering review and are monitored for drift.
-- Lead technical direction for a team of 9. The team's work received 2 global and 2 local Ford innovation awards.
+- Lead technical direction for a team of 9. The team's work received 2 global Ford and 2 local Koç Group innovation awards.
 
 ### Software Engineer, Network & Systems
-*Ford Otosan, Türkiye* · May 2019 – Dec 2022
+*Ford Otosan, Gölcük plant* · May 2019 – Dec 2022
 
 - Built Gözcü, a no-code platform for real-time accident detection on CCTV, deployable to a new camera in one click.
 - Wrote its inference backend in C/C++ (GStreamer, OpenCV, YOLO): 250+ concurrent RTSP streams, under 200 ms end-to-end latency.
