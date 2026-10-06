@@ -10,7 +10,7 @@ permalink: /cv/
 
 ## Summary
 
-Senior software architect at Ford Otosan (Ford Motor Company joint venture), working on AI infrastructure, with 8 years of production ML work. I run the on-prem GPU cluster and LLM serving stack used by 15,000 employees and 250 developers. Before that I built real-time computer vision systems in C/C++ that run in four car plants. My recent open-source work is on the reliability of coding agents with self-hosted models.
+Senior software architect at Ford Otosan (Ford Motor Company joint venture) with 8 years of production ML work. I work on the company's on-prem AI platform: the GPU cluster, the LLM serving that 250 developers and their coding agents use (about 25,000 requests a day on two H200s), and the internal chatbot for 15,000 employees. Before that I built real-time computer vision systems in C/C++ that run in four car plants. My recent open-source work is on the reliability of coding agents with self-hosted models.
 
 ## Experience
 
@@ -18,8 +18,8 @@ Senior software architect at Ford Otosan (Ford Motor Company joint venture), wor
 *Ford Otosan (Ford Motor Company joint venture), Istanbul. Senior Software Engineer from Dec 2022 to Aug 2026.* · Aug 2026 – Present
 
 - Designed and built the company's LLM gateway. It decides per request whether the data may leave the company: confidential code and documents go to open models on our own GPUs, the rest to Azure OpenAI. Access goes through Entra ID (OAuth2/OIDC).
-- Deployed vLLM on on-prem GPUs behind OpenAI-compatible endpoints, so 250 developers use Copilot CLI with internal models (600+ agent requests a day) without code leaving the network or per-token API costs.
-- Run the multi-site Kubernetes GPU cluster (5 servers; 2× H200, 4× A100, 4× L40S, 4× V100) with Prometheus and Grafana monitoring. It hosts the internal chatbot (15,000 users), the coding models and the production vision models.
+- Run the inference service for 250 developers and their coding agents on two H200 GPUs (SGLang with speculative decoding): about 25,000 requests a day with ~96K-token prompts, 2.4B prompt tokens a day of which 93% are served from the prefix cache, and p95 time to first token under 1 s. Code never leaves the network and there are no per-token API costs.
+- Run the multi-site Kubernetes GPU cluster (5 servers, 14 GPUs: 2× H200, 4× A100, 4× L40S, 4× V100) with Prometheus and Grafana monitoring. It hosts the internal chatbot (15,000 users), the coding models and the production vision models.
 - Turned MobileAI, our vision system in four plants, into a no-code platform where line engineers collect data, label and train models themselves. New models go live only after engineering review and are monitored for drift.
 - Lead technical direction for a team of 9. The team's work received 2 global Ford and 2 local Koç Group innovation awards.
 

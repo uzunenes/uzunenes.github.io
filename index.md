@@ -2,7 +2,7 @@
 layout: home
 ---
 
-I'm a senior software architect at Ford Otosan in Istanbul, working on AI infrastructure. I run the GPU cluster and LLM serving stack that 15,000 employees and 250 developers use, and I write here about inference, GPUs and coding agents.
+I'm a senior software architect at Ford Otosan in Istanbul. I work on the company's on-prem AI platform: GPU clusters, LLM serving for developers' coding agents and an internal chatbot. I write here about inference, GPUs and coding agents.
 
 - [CV](/cv/) ([PDF](/assets/enes-uzun-cv.pdf))
 - [About](/about/)

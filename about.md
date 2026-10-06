@@ -8,7 +8,7 @@ I'm a senior software architect at Ford Otosan, the Ford Motor Company joint ven
 
 ### What I work on now
 
-I run our on-prem GPU cluster and the LLM serving stack on top of it. The internal chatbot has 15,000 users, and 250 developers use self-hosted coding models through vLLM, around 600 agent requests a day, without their code leaving the network. In front of the models sits a gateway I designed: for each request it decides whether the data may go to Azure OpenAI or has to stay on our own GPUs.
+I work on our on-prem GPU cluster and the LLM serving stack on top of it. 250 developers and their coding agents send about 25,000 requests a day to SGLang on two H200 GPUs. Agent prompts are long, around 96,000 tokens on average, but 93% of those tokens come from the prefix cache, which keeps the time to first token under a second. The same platform runs an internal chatbot for 15,000 employees. In front of the models sits a gateway I designed: for each request it decides whether the data may go to Azure OpenAI or has to stay on our own GPUs.
 
 The cluster spans several sites and mixes H200, A100, L40S and V100 GPUs under one Kubernetes setup. I spoke about how we run it at KCD Istanbul 2026.
 
