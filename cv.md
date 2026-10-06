@@ -86,8 +86,8 @@ github.com/uzunenes
 
 ## Education
 
-### M.Sc. Electronics Engineering, coursework completed
-*Gebze Technical University* · 2019 – 2023
+### M.Sc. Electronics Engineering, thesis in progress
+*Gebze Technical University* · 2019 – Present
 
 - Research on unsupervised video anomaly detection with autoencoders (ICES 2023 paper above).
 
