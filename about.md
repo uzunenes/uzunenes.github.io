@@ -20,6 +20,7 @@ I spent five years on real-time computer vision in C and C++. Gözcü, an accide
 
 - Co-authored the official [YOLO11 example for Triton Inference Server in C++](https://github.com/ultralytics/ultralytics/pull/20553) in Ultralytics.
 - Reported and root-caused three bugs in the [jcode](https://github.com/1jehuang/jcode/issues/908) coding agent while running it on self-hosted vLLM and SGLang. All were fixed upstream.
+- Reported and root-caused a bug in [TRL](https://github.com/huggingface/trl/issues/7449): prompt-completion training on Gemma 4 12B/26B/31B put the loss on the wrong tokens and dropped short answers. Fixed upstream in v1.14.2; [write-up](/2026/10/07/trl-v1-14-2-gemma-4-prompt-completion-fix.html).
 - Maintain [triton-server-hpa](https://github.com/uzunenes/triton-server-hpa) (GPU-based autoscaling for Triton) and [k8s-ai-stack](https://github.com/uzunenes/k8s-ai-stack) (a self-hosted LLM stack on Kubernetes).
 
 ### Contact
