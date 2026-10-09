@@ -10,7 +10,7 @@ permalink: /cv/
 
 ## Summary
 
-Senior software architect at Ford Otosan (Ford Motor Company joint venture) with 8 years of production ML work. I work on the company's on-prem AI platform: the GPU cluster, the LLM serving that 250 developers and their coding agents use (about 25,000 requests a day on two H200s), and the internal chatbot for 15,000 employees. Before that I built real-time computer vision systems in C/C++ that run in four car plants. My recent open-source work is on the reliability of coding agents with self-hosted models.
+Senior software architect at Ford Otosan (Ford Motor Company joint venture) with 8 years of production ML work. I work on the company's on-prem AI platform: the GPU cluster, the LLM serving that 250 developers and their coding agents use (about 25,000 requests a day on two H200s, 93% of prompt tokens served from the prefix cache), and the internal chatbot for 15,000 employees. Before that I built real-time computer vision systems in C/C++ that run in four car plants, analysing 250+ camera streams in real time. My recent open-source work is on the reliability of coding agents with self-hosted models.
 
 ## Experience
 
