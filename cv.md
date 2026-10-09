@@ -6,7 +6,7 @@ permalink: /cv/
 
 **Senior Software Architect** · Istanbul, Türkiye · Open to relocation worldwide
 
-[Download PDF](/assets/enes-uzun-cv.pdf) · updated 29 Sep 2026
+[Download PDF](/assets/enes-uzun-cv.pdf) · updated 9 Oct 2026
 
 ## Summary
 
@@ -19,7 +19,7 @@ Senior software architect at Ford Otosan (Ford Motor Company joint venture) with
 
 - Designed and built the company's LLM gateway. It decides per request whether the data may leave the company: confidential code and documents go to open models on our own GPUs, the rest to Azure OpenAI. Access goes through Entra ID (OAuth2/OIDC).
 - Run the inference service for 250 developers and their coding agents on two H200 GPUs (SGLang with speculative decoding): about 25,000 requests a day with ~96K-token prompts, 2.4B prompt tokens a day of which 93% are served from the prefix cache, and p95 time to first token under 1 s. Code never leaves the network and there are no per-token API costs.
-- Run the multi-site Kubernetes GPU cluster (5 servers, 14 GPUs: 2× H200, 4× A100, 4× L40S, 4× V100) with Prometheus and Grafana monitoring. It hosts the internal chatbot (15,000 users), the coding models and the production vision models.
+- Run the Kubernetes GPU cluster across three sites in two countries (5 servers, 16 GPUs: 2× H200, 4× A100, 6× L40S, 4× V100) with Prometheus and Grafana monitoring. SGLang serving runs on the H200s; LLM fine-tuning and Triton vision inference run on the A100 and L40S nodes. It hosts the internal chatbot (15,000 users), the coding models and the production vision models.
 - Turned MobileAI, our vision system in four plants, into a no-code platform where line engineers collect data, label and train models themselves. New models go live only after engineering review and are monitored for drift.
 - Lead technical direction for a team of 9. The team's work received 2 global Ford and 2 local Koç Group innovation awards.
 
