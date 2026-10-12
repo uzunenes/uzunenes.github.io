@@ -10,7 +10,7 @@ permalink: /cv/
 
 ## Summary
 
-Senior software architect at Ford Otosan (Ford Motor Company joint venture) with 8 years of production ML work. I work on the company's on-prem AI platform: the GPU cluster, the LLM serving that 250 developers and their coding agents use (about 25,000 requests a day on two H200s, 93% of prompt tokens served from the prefix cache), and the internal chatbot for 15,000 employees. Before that I built real-time computer vision systems in C/C++ that run in four car plants, analysing 250+ camera streams in real time. My recent open-source work is on the reliability of coding agents with self-hosted models.
+Senior software architect at Ford Otosan (Ford Motor Company joint venture) with 8 years of production ML work. I work on the company's on-prem AI platform: the GPU cluster, the LLM serving that 250 developers and their coding agents use (about 25,000 requests a day on two H200s, 93% of prompt tokens served from the prefix cache), and the internal chatbot for 15,000 employees. Before that I built real-time computer vision systems in C/C++ that run in four car plants, analysing 250+ camera streams in real time. My recent open-source work is bug reports and root-cause analysis for self-hosted LLMs in SGLang, Hugging Face TRL and jcode.
 
 ## Experience
 
@@ -41,6 +41,11 @@ Senior software architect at Ford Otosan (Ford Motor Company joint venture) with
 *[Issue #7449](https://github.com/huggingface/trl/issues/7449); fix merged as [PR #7463](https://github.com/huggingface/trl/pull/7463)* · Sep – Oct 2026
 
 - Found and root-caused a bug where prompt-completion training (SFT, DPO, KTO) on Gemma 4 12B/26B/31B put the loss on the wrong tokens and silently dropped short answers. Opened the issue and a patch; the maintainers merged a closely related fix that credits me as co-author, released in v1.14.2 ([write-up](https://uzunenes.com/2026/10/07/trl-v1-14-2-gemma-4-prompt-completion-fix.html)).
+
+### SGLang
+*[Issue #36333](https://github.com/sgl-project/sglang/issues/36333): production reports* · Sep – Oct 2026
+
+- Reported a production failure on v0.5.17 (DeepSeek-V4-Flash, 2× H200): after a streaming client disconnected, an orphan request flooded the logs, the detokenizer stopped responding and Kubernetes restarted the server. After the upstream fix, confirmed on v0.5.20 with about 28 hours and 45,000 production requests and controlled disconnect tests that it no longer occurs.
 
 ### jcode, an agentic coding CLI in Rust
 *3 bugs reported and root-caused, all fixed upstream* · Aug 2026
