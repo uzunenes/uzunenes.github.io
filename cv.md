@@ -19,7 +19,7 @@ Senior software architect at Ford Otosan (Ford Motor Company joint venture) with
 
 - Designed and built the company's LLM gateway. It decides per request whether the data may leave the company: confidential code and documents go to open models on our own GPUs, the rest to Azure OpenAI. Access goes through Entra ID (OAuth2/OIDC).
 - Run the inference service for 250 developers and their coding agents on two H200 GPUs (SGLang with speculative decoding): about 25,000 requests a day with ~96K-token prompts, 2.4B prompt tokens a day of which 93% are served from the prefix cache, and p95 time to first token under 1 s. Code never leaves the network and there are no per-token API costs.
-- Run the Kubernetes GPU cluster across three sites in two countries (5 servers, 16 GPUs: 2× H200, 4× A100, 6× L40S, 4× V100) with Prometheus and Grafana monitoring. SGLang serving runs on the H200s; LLM fine-tuning and Triton vision inference run on the A100 and L40S nodes. It hosts the internal chatbot (15,000 users), the coding models and the production vision models.
+- Run the Kubernetes GPU cluster across three sites in two countries (5 servers, 16 GPUs: 2× H200, 4× A100, 6× L40S, 4× V100) with Prometheus and Grafana monitoring. It hosts the internal chatbot (15,000 users), the coding models, LLM fine-tuning and the production vision models.
 - Turned MobileAI, our vision system in four plants, into a no-code platform where line engineers collect data, label and train models themselves. New models go live only after engineering review and are monitored for drift.
 - Lead technical direction for a team of 9. The team's work received 2 global Ford and 2 local Koç Group innovation awards.
 
@@ -28,12 +28,12 @@ Senior software architect at Ford Otosan (Ford Motor Company joint venture) with
 
 - Built Gözcü, a no-code platform for real-time accident detection on CCTV, deployable to a new camera in one click.
 - Wrote its inference backend in C/C++ (GStreamer, OpenCV, YOLO): 250+ concurrent RTSP streams, under 200 ms end-to-end latency.
-- Gözcü received Ford's President's Health & Safety Award in 2023. Gözcü and MobileAI are part of the Ford Otosan plant named a World Economic Forum Global Lighthouse in 2026.
+- Gözcü and MobileAI are part of the Ford Otosan plant named a World Economic Forum Global Lighthouse in 2026.
 
 ### Software Engineer
 *Evstek Information Technologies, Istanbul* · Jun 2018 – May 2019
 
-- Developed the image-analysis software of KE-BOT, a robotic system for FUE hair transplantation (C++, OpenCV). The work was published at IEEE.
+- Developed the image-analysis software of KE-BOT, a robotic system for FUE hair transplantation (C++, OpenCV).
 
 ## Open source
 
@@ -47,7 +47,6 @@ Senior software architect at Ford Otosan (Ford Motor Company joint venture) with
 
 - Agents on self-hosted models (vLLM, SGLang, Ollama) stalled after context compaction. Traced it to custom providers being routed through the OpenRouter runtime, which dropped orphaned tool outputs ([#908](https://github.com/1jehuang/jcode/issues/908)).
 - Models without a declared `input` list were treated as image-capable, causing an unrecoverable HTTP 400 loop. Isolated it with an A/B matrix; the text-only default I proposed was adopted ([#847](https://github.com/1jehuang/jcode/issues/847)).
-- Shifted symbols were lost on Turkish Q keyboards in the VS Code terminal. Identified the missing Kitty `REPORT_ALTERNATE_KEYS` flag ([#870](https://github.com/1jehuang/jcode/issues/870)).
 
 ### Ultralytics YOLO
 *[PR #20553](https://github.com/ultralytics/ultralytics/pull/20553), merged in release 8.3.131* · May 2025
@@ -60,15 +59,13 @@ github.com/uzunenes
 - [triton-server-hpa](https://github.com/uzunenes/triton-server-hpa): scales Triton on Kubernetes by GPU utilisation (DCGM metrics, Prometheus adapter, HPA), with GPU time-slicing so it runs on one GPU.
 - [k8s-ai-stack](https://github.com/uzunenes/k8s-ai-stack): self-hosted LLM stack on Kubernetes with vLLM, Ollama and OpenWebUI (OAuth2), plus throughput benchmarks.
 - [puci](https://github.com/uzunenes/puci): small AI coding-agent harness in C17; about 100 kB per session, runs 1,000 agents on one `poll()` loop for evaluation.
-- [piciem](https://github.com/uzunenes/piciem), [librtsplink](https://github.com/uzunenes/librtsplink), [libmqttlink](https://github.com/uzunenes/libmqttlink): image processing in plain C (DFT/FFT, convolution), RTSP and MQTT client libraries.
 
 ## Skills
 
 - **Inference:** vLLM, SGLang, Triton Inference Server, TensorRT, OpenAI-compatible APIs
-- **Platform:** Kubernetes, OpenShift, Docker, ArgoCD, NVIDIA DCGM, Prometheus, Grafana, MLflow, GitHub Actions, Azure DevOps
-- **Languages:** Python, C, Bash (expert); C++, Go; Rust (reading and debugging)
+- **Platform:** Kubernetes, OpenShift, Docker, ArgoCD, NVIDIA DCGM, Prometheus, Grafana, MLflow, GitHub Actions, Azure DevOps, Linux (strace, perf); gRPC, MQTT, RTSP
+- **Languages:** Python, C, Bash (expert); C++, Go
 - **ML and vision:** PyTorch, YOLO, RT-DETR, OpenCV, GStreamer
-- **Systems:** Linux, strace, perf; TCP/UDP, gRPC, MQTT, RTSP
 - **Spoken:** Turkish (native), English (professional)
 
 ## Publications and talks
@@ -95,13 +92,6 @@ github.com/uzunenes
 *Gebze Technical University* · 2019 – Jan 2027 (expected)
 
 - Coursework completed 2019–2022; thesis started in 2026, graduation expected January 2027.
-- Research on unsupervised video anomaly detection with autoencoders (ICES 2023 paper above).
 
 ### B.Sc. Electronics and Telecommunication Engineering
 *Kocaeli University* · 2013 – 2018
-
-- Thesis: real-time lane departure warning on an embedded platform.
-
-## Courses
-
-Fast and Efficient LLM Inference with vLLM (DeepLearning.AI, 2026); Accelerate Your Model (Google DeepMind on DataCamp, 2026); Executive Leadership (Koç University, 2025); Certified Scrum Team Member (Scrum Inc., 2022).
