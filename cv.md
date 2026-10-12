@@ -6,7 +6,7 @@ permalink: /cv/
 
 **Senior Software Architect** · Istanbul, Türkiye · Open to relocation worldwide
 
-[Download PDF](/assets/enes-uzun-cv.pdf) · updated 9 Oct 2026
+[Download PDF](/assets/enes-uzun-cv.pdf) · updated 12 Oct 2026
 
 ## Summary
 
@@ -36,6 +36,11 @@ Senior software architect at Ford Otosan (Ford Motor Company joint venture) with
 - Developed the image-analysis software of KE-BOT, a robotic system for FUE hair transplantation (C++, OpenCV). The work was published at IEEE.
 
 ## Open source
+
+### Hugging Face TRL
+*[Issue #7449](https://github.com/huggingface/trl/issues/7449); fix merged as [PR #7463](https://github.com/huggingface/trl/pull/7463)* · Sep – Oct 2026
+
+- Found and root-caused a bug where prompt-completion training (SFT, DPO, KTO) on Gemma 4 12B/26B/31B put the loss on the wrong tokens and silently dropped short answers. Opened the issue and a patch; the maintainers merged a closely related fix that credits me as co-author, released in v1.14.2 ([write-up](https://uzunenes.com/2026/10/07/trl-v1-14-2-gemma-4-prompt-completion-fix.html)).
 
 ### jcode, an agentic coding CLI in Rust
 *3 bugs reported and root-caused, all fixed upstream* · Aug 2026
